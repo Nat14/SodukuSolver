@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="soduku.css" type="text/css"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="text/javascript" src="sodukuV3.js"></script>
+    <title>Soduku Solver</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Soduku Solver</a></li>
+              <li><a href="#"></a></li>
+
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nothing here">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"></a></li>
+
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+
+    <div class="container-fluid topLine">
+      <div>
+        <h1>SODUKU BOARD</h1>
+        <div class="row">
+          <div class="col-sm-4">
+          </div>
+          <div class="col-sm-4 divResultButton">
+            <p><input type="button" id="showResultButton" class="btn btn-default btn-block" value="Show Result" onclick="displayBoard()"></p>
+          </div>
+          <div class="col-sm-4">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="sideLeft">
+            <p>Row 1</p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="sideRight">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="sideLeft">
+            <p>Row 2</p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="sideRight">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="sideLeft">
+            <p>Row 3</p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="sideRight">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="sideLeft">
+            <p>Row 4</p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="sideRight">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="sideLeft">
+            <p>Row 5</p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="sideRight">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="sideLeft">
+            <p>Row 6</p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="sideRight">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="sideLeft">
+            <p>Row 7</p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="sideRight">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="sideLeft">
+            <p>Row 8</p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="sideRight">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="sideLeft">
+            <p>Row 9</p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="item">
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="sideRight">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+    var displayStartBoard = true;
+
+    function displayBoard() {
+      var arr;
+      if (displayStartBoard === true) {
+        arr = startSoduku;
+        displayStartBoard = false;
+        document.getElementById("showResultButton").value = "Show Result";
+      } else {
+        arr = soduku;
+        displayStartBoard = true;
+        document.getElementById("showResultButton").value = "Show Original Board";
+      }
+
+      var itemNumber = 0;
+      for (var row = 0; row<9; row++) {
+        for (var column = 0; column<9; column++ ) {
+          if (arr[row][column] != 0) {
+            document.getElementsByClassName("item")[itemNumber].innerHTML = "<p>" + arr[row][column] + "</p>";
+          } else {
+            document.getElementsByClassName("item")[itemNumber].innerHTML = "<p>&nbsp;</p>";
+          }
+          if (startSoduku[row][column] == 0) {
+            document.getElementsByClassName("item")[itemNumber].className = "item itemColor";
+          }
+          itemNumber++;
+        }
+      }
+    }
+
+    displayBoard();
+    </script>
+
+  </body>
+</html>
